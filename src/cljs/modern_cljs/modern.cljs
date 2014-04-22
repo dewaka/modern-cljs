@@ -16,7 +16,10 @@
     (set! (.-fillStyle ctx) "blue")
     (.beginPath ctx)
     (.arc ctx 55 207 50 0 (* 2 (.-PI js/Math)))
-    (.stroke ctx))
+    (.stroke ctx)
+    (set! (.-fillStyle ctx) "yellow")
+    (.fill ctx)
+)
 
 (defn draw-rect [ctx color x1 y1 x2 y2]
     (set! (.-fillStyle ctx) color)

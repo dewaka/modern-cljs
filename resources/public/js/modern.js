@@ -23265,7 +23265,9 @@ modern_cljs.modern.draw_circle = function draw_circle(ctx) {
   ctx.fillStyle = "blue";
   ctx.beginPath();
   ctx.arc(55, 207, 50, 0, 2 * Math.PI);
-  return ctx.stroke();
+  ctx.stroke();
+  ctx.fillStyle = "yellow";
+  return ctx.fill();
 };
 modern_cljs.modern.draw_rect = function draw_rect(ctx, color, x1, y1, x2, y2) {
   ctx.fillStyle = color;
