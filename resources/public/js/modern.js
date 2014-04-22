@@ -23261,12 +23261,12 @@ modern_cljs.modern.get_name = function get_name() {
   return window.prompt("Please enter your name: ");
 };
 modern_cljs.modern.my_canvas = document.getElementById("myCanvas");
-modern_cljs.modern.draw_circle = function draw_circle(ctx) {
+modern_cljs.modern.draw_circle = function draw_circle(ctx, x, y, r, s_angle, e_angle, color) {
   ctx.fillStyle = "blue";
   ctx.beginPath();
-  ctx.arc(55, 207, 50, 0, 2 * Math.PI);
+  ctx.arc(x, y, r, s_angle, e_angle);
   ctx.stroke();
-  ctx.fillStyle = "yellow";
+  ctx.fillStyle = color;
   return ctx.fill();
 };
 modern_cljs.modern.draw_rect = function draw_rect(ctx, color, x1, y1, x2, y2) {
@@ -23276,7 +23276,8 @@ modern_cljs.modern.draw_rect = function draw_rect(ctx, color, x1, y1, x2, y2) {
 modern_cljs.modern.paint_things = function paint_things() {
   var ctx = modern_cljs.modern.my_canvas.getContext("2d");
   modern_cljs.modern.draw_rect.call(null, ctx, "#FF0000", 0, 0, 150, 75);
-  modern_cljs.modern.draw_circle.call(null, ctx);
+  modern_cljs.modern.draw_circle.call(null, ctx, 55, 207, 50, 0, 2 * Math.PI, "yellow");
+  modern_cljs.modern.draw_circle.call(null, ctx, 155, 407, 100, 0, 2 * Math.PI, "blue");
   return modern_cljs.modern.draw_rect.call(null, ctx, "green", 155, 80, 255, 180);
 };
 modern_cljs.modern.do_stuff = function do_stuff() {
