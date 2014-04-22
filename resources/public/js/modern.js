@@ -23261,12 +23261,21 @@ modern_cljs.modern.get_name = function get_name() {
   return window.prompt("Please enter your name: ");
 };
 modern_cljs.modern.my_canvas = document.getElementById("myCanvas");
+modern_cljs.modern.draw_circle = function draw_circle(ctx) {
+  ctx.fillStyle = "blue";
+  ctx.beginPath();
+  ctx.arc(55, 207, 50, 0, 2 * Math.PI);
+  return ctx.stroke();
+};
+modern_cljs.modern.draw_rect = function draw_rect(ctx, color, x1, y1, x2, y2) {
+  ctx.fillStyle = color;
+  return ctx.fillRect(x1, y1, x2, y2);
+};
 modern_cljs.modern.paint_things = function paint_things() {
   var ctx = modern_cljs.modern.my_canvas.getContext("2d");
-  ctx.fillStyle = "#FF0000";
-  ctx.fillRect(0, 0, 150, 75);
-  ctx.fillStyle = "green";
-  return ctx.fillRect(155, 80, 255, 180);
+  modern_cljs.modern.draw_rect.call(null, ctx, "#FF0000", 0, 0, 150, 75);
+  modern_cljs.modern.draw_circle.call(null, ctx);
+  return modern_cljs.modern.draw_rect.call(null, ctx, "green", 155, 80, 255, 180);
 };
 modern_cljs.modern.do_stuff = function do_stuff() {
   return modern_cljs.modern.greet.call(null, modern_cljs.modern.get_name.call(null));

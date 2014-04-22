@@ -12,13 +12,24 @@
 
 (def my-canvas (.getElementById js/document "myCanvas"))
 
+(defn draw-circle [ctx]
+    (set! (.-fillStyle ctx) "blue")
+    (.beginPath ctx)
+    (.arc ctx 55 207 50 0 (* 2 (.-PI js/Math)))
+    (.stroke ctx))
+
+(defn draw-rect [ctx color x1 y1 x2 y2]
+    (set! (.-fillStyle ctx) color)
+    (.fillRect ctx x1 y1 x2 y2))
+
 (defn paint-things []
   (let [ctx (.getContext my-canvas "2d")]
-    (set! (.-fillStyle ctx) "#FF0000")
-    (.fillRect ctx 0 0 150 75)
-
-    (set! (.-fillStyle ctx) "green")
-    (.fillRect ctx 155 80 255 180)))
+    ;; Red rectangle
+    (draw-rect ctx "#FF0000" 0 0 150 75)
+    ;; Paint a circle
+    (draw-circle ctx)
+    ;; Green rectangle
+    (draw-rect ctx "green" 155 80 255 180)))
 
 (defn do-stuff []
   (greet (get-name)))
