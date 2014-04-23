@@ -23262,6 +23262,11 @@ modern_cljs.modern2.noisy_greeter = function noisy_greeter(name) {
   return alert([cljs.core.str("Hello there, "), cljs.core.str(name)].join(""));
 };
 goog.exportSymbol("modern_cljs.modern2.noisy_greeter", modern_cljs.modern2.noisy_greeter);
+modern_cljs.modern2.simple_click_event = function simple_click_event(clicker) {
+  alert("Hi there you clicked me!");
+  return alert([cljs.core.str("You are a "), cljs.core.str([cljs.core.str(clicker)].join(""))].join(""));
+};
+goog.exportSymbol("modern_cljs.modern2.simple_click_event", modern_cljs.modern2.simple_click_event);
 goog.provide("modern_cljs.modern");
 goog.require("cljs.core");
 modern_cljs.modern.greet = function greet(name) {
