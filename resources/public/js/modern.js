@@ -23311,9 +23311,14 @@ modern_cljs.modern2.display_result = function display_result() {
   var temp__4090__auto__ = document.getElementById("cInput");
   if (cljs.core.truth_(temp__4090__auto__)) {
     var input = temp__4090__auto__;
-    return alert([cljs.core.str("Got it: "), cljs.core.str(input.value)].join(""));
+    var expr = input.value;
+    alert([cljs.core.str("Got it: "), cljs.core.str(expr)].join(""));
+    return modern_cljs.modern2.eval_post_fix.call(null, expr);
   } else {
     return alert("Could not get input");
   }
 };
 goog.exportSymbol("modern_cljs.modern2.display_result", modern_cljs.modern2.display_result);
+modern_cljs.modern2.eval_post_fix = function eval_post_fix(exp) {
+  return alert([cljs.core.str("Going to evaluate: "), cljs.core.str(exp)].join(""));
+};

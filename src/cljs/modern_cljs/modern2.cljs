@@ -14,5 +14,11 @@
 
 (defn ^:export display-result []
   (if-let [input (.getElementById js/document "cInput")]
-    (js/alert (str "Got it: " (.-value input))) 
+    (let [expr (.-value input)] 
+      (js/alert (str "Got it: " expr))
+      (eval-post-fix expr)) 
     (js/alert "Could not get input")))
+
+;; Stub function for evaluating post-fix expressions
+(defn eval-post-fix [exp]
+  (js/alert (str "Going to evaluate: " exp)))
