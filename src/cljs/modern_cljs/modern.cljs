@@ -51,7 +51,7 @@
 (defn register-mousemove []
   (set! (.-onmousemove my-canvas) print-mouse-position))
 
-(paint-things)
+;; (paint-things)
 ;; (register-mouseclick)
 
-(register-mousemove)
+;; (register-mousemove)

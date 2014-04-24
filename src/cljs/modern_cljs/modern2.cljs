@@ -11,3 +11,8 @@
 (defn ^:export simple-click-event [clicker]
   (js/alert "Hi there you clicked me!")
   (js/alert (str "You are a " (str clicker))))
+
+(defn ^:export display-result []
+  (if-let [input (.getElementById js/document "cInput")]
+    (js/alert (str "Got it: " (.-value input))) 
+    (js/alert "Could not get input")))
