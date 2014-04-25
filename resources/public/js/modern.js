@@ -23275,20 +23275,20 @@ modern_cljs.modern2.simple_click_event = function simple_click_event(clicker) {
 };
 goog.exportSymbol("modern_cljs.modern2.simple_click_event", modern_cljs.modern2.simple_click_event);
 modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
-  var seq__11098 = cljs.core.seq.call(null, cljs.core.range.call(null, 1, 101));
-  var chunk__11099 = null;
-  var count__11100 = 0;
-  var i__11101 = 0;
+  var seq__6905 = cljs.core.seq.call(null, cljs.core.range.call(null, 1, 101));
+  var chunk__6906 = null;
+  var count__6907 = 0;
+  var i__6908 = 0;
   while (true) {
-    if (i__11101 < count__11100) {
-      var n = cljs.core._nth.call(null, chunk__11099, i__11101);
+    if (i__6908 < count__6907) {
+      var n = cljs.core._nth.call(null, chunk__6906, i__6908);
       modern_cljs.modern2.print_line.call(null, function() {
-        var ocr_11102 = cljs.core.mod.call(null, n, 3);
-        var ocr_11103 = cljs.core.mod.call(null, n, 5);
+        var ocr_6909 = cljs.core.mod.call(null, n, 3);
+        var ocr_6910 = cljs.core.mod.call(null, n, 5);
         try {
-          if (ocr_11102 === 0) {
+          if (ocr_6909 === 0) {
             try {
-              if (ocr_11103 === 0) {
+              if (ocr_6910 === 0) {
                 return "FizzBuzz";
               } else {
                 if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
@@ -23297,9 +23297,9 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                   return null;
                 }
               }
-            } catch (e11111) {
-              if (e11111 instanceof Error) {
-                var e__5267__auto__ = e11111;
+            } catch (e6918) {
+              if (e6918 instanceof Error) {
+                var e__5267__auto__ = e6918;
                 if (e__5267__auto__ === cljs.core.match.backtrack) {
                   throw cljs.core.match.backtrack;
                 } else {
@@ -23307,7 +23307,7 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                 }
               } else {
                 if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                  throw e11111;
+                  throw e6918;
                 } else {
                   return null;
                 }
@@ -23320,12 +23320,12 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
               return null;
             }
           }
-        } catch (e11108) {
-          if (e11108 instanceof Error) {
-            var e__5267__auto__ = e11108;
+        } catch (e6915) {
+          if (e6915 instanceof Error) {
+            var e__5267__auto__ = e6915;
             if (e__5267__auto__ === cljs.core.match.backtrack) {
               try {
-                if (ocr_11102 === 0) {
+                if (ocr_6909 === 0) {
                   return "Fizz";
                 } else {
                   if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
@@ -23334,12 +23334,12 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                     return null;
                   }
                 }
-              } catch (e11109) {
-                if (e11109 instanceof Error) {
-                  var e__5267__auto____$1 = e11109;
+              } catch (e6916) {
+                if (e6916 instanceof Error) {
+                  var e__5267__auto____$1 = e6916;
                   if (e__5267__auto____$1 === cljs.core.match.backtrack) {
                     try {
-                      if (ocr_11103 === 0) {
+                      if (ocr_6910 === 0) {
                         return "Buzz";
                       } else {
                         if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
@@ -23348,9 +23348,9 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                           return null;
                         }
                       }
-                    } catch (e11110) {
-                      if (e11110 instanceof Error) {
-                        var e__5267__auto____$2 = e11110;
+                    } catch (e6917) {
+                      if (e6917 instanceof Error) {
+                        var e__5267__auto____$2 = e6917;
                         if (e__5267__auto____$2 === cljs.core.match.backtrack) {
                           return n;
                         } else {
@@ -23358,7 +23358,7 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                         }
                       } else {
                         if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                          throw e11110;
+                          throw e6917;
                         } else {
                           return null;
                         }
@@ -23369,7 +23369,7 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                   }
                 } else {
                   if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                    throw e11109;
+                    throw e6916;
                   } else {
                     return null;
                   }
@@ -23380,46 +23380,46 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
             }
           } else {
             if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-              throw e11108;
+              throw e6915;
             } else {
               return null;
             }
           }
         }
       }());
-      var G__11122 = seq__11098;
-      var G__11123 = chunk__11099;
-      var G__11124 = count__11100;
-      var G__11125 = i__11101 + 1;
-      seq__11098 = G__11122;
-      chunk__11099 = G__11123;
-      count__11100 = G__11124;
-      i__11101 = G__11125;
+      var G__6929 = seq__6905;
+      var G__6930 = chunk__6906;
+      var G__6931 = count__6907;
+      var G__6932 = i__6908 + 1;
+      seq__6905 = G__6929;
+      chunk__6906 = G__6930;
+      count__6907 = G__6931;
+      i__6908 = G__6932;
       continue;
     } else {
-      var temp__4092__auto__ = cljs.core.seq.call(null, seq__11098);
+      var temp__4092__auto__ = cljs.core.seq.call(null, seq__6905);
       if (temp__4092__auto__) {
-        var seq__11098__$1 = temp__4092__auto__;
-        if (cljs.core.chunked_seq_QMARK_.call(null, seq__11098__$1)) {
-          var c__4191__auto__ = cljs.core.chunk_first.call(null, seq__11098__$1);
-          var G__11126 = cljs.core.chunk_rest.call(null, seq__11098__$1);
-          var G__11127 = c__4191__auto__;
-          var G__11128 = cljs.core.count.call(null, c__4191__auto__);
-          var G__11129 = 0;
-          seq__11098 = G__11126;
-          chunk__11099 = G__11127;
-          count__11100 = G__11128;
-          i__11101 = G__11129;
+        var seq__6905__$1 = temp__4092__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__6905__$1)) {
+          var c__4191__auto__ = cljs.core.chunk_first.call(null, seq__6905__$1);
+          var G__6933 = cljs.core.chunk_rest.call(null, seq__6905__$1);
+          var G__6934 = c__4191__auto__;
+          var G__6935 = cljs.core.count.call(null, c__4191__auto__);
+          var G__6936 = 0;
+          seq__6905 = G__6933;
+          chunk__6906 = G__6934;
+          count__6907 = G__6935;
+          i__6908 = G__6936;
           continue;
         } else {
-          var n = cljs.core.first.call(null, seq__11098__$1);
+          var n = cljs.core.first.call(null, seq__6905__$1);
           modern_cljs.modern2.print_line.call(null, function() {
-            var ocr_11112 = cljs.core.mod.call(null, n, 3);
-            var ocr_11113 = cljs.core.mod.call(null, n, 5);
+            var ocr_6919 = cljs.core.mod.call(null, n, 3);
+            var ocr_6920 = cljs.core.mod.call(null, n, 5);
             try {
-              if (ocr_11112 === 0) {
+              if (ocr_6919 === 0) {
                 try {
-                  if (ocr_11113 === 0) {
+                  if (ocr_6920 === 0) {
                     return "FizzBuzz";
                   } else {
                     if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
@@ -23428,9 +23428,9 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                       return null;
                     }
                   }
-                } catch (e11121) {
-                  if (e11121 instanceof Error) {
-                    var e__5267__auto__ = e11121;
+                } catch (e6928) {
+                  if (e6928 instanceof Error) {
+                    var e__5267__auto__ = e6928;
                     if (e__5267__auto__ === cljs.core.match.backtrack) {
                       throw cljs.core.match.backtrack;
                     } else {
@@ -23438,7 +23438,7 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                     }
                   } else {
                     if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                      throw e11121;
+                      throw e6928;
                     } else {
                       return null;
                     }
@@ -23451,12 +23451,12 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                   return null;
                 }
               }
-            } catch (e11118) {
-              if (e11118 instanceof Error) {
-                var e__5267__auto__ = e11118;
+            } catch (e6925) {
+              if (e6925 instanceof Error) {
+                var e__5267__auto__ = e6925;
                 if (e__5267__auto__ === cljs.core.match.backtrack) {
                   try {
-                    if (ocr_11112 === 0) {
+                    if (ocr_6919 === 0) {
                       return "Fizz";
                     } else {
                       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
@@ -23465,12 +23465,12 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                         return null;
                       }
                     }
-                  } catch (e11119) {
-                    if (e11119 instanceof Error) {
-                      var e__5267__auto____$1 = e11119;
+                  } catch (e6926) {
+                    if (e6926 instanceof Error) {
+                      var e__5267__auto____$1 = e6926;
                       if (e__5267__auto____$1 === cljs.core.match.backtrack) {
                         try {
-                          if (ocr_11113 === 0) {
+                          if (ocr_6920 === 0) {
                             return "Buzz";
                           } else {
                             if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
@@ -23479,9 +23479,9 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                               return null;
                             }
                           }
-                        } catch (e11120) {
-                          if (e11120 instanceof Error) {
-                            var e__5267__auto____$2 = e11120;
+                        } catch (e6927) {
+                          if (e6927 instanceof Error) {
+                            var e__5267__auto____$2 = e6927;
                             if (e__5267__auto____$2 === cljs.core.match.backtrack) {
                               return n;
                             } else {
@@ -23489,7 +23489,7 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                             }
                           } else {
                             if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                              throw e11120;
+                              throw e6927;
                             } else {
                               return null;
                             }
@@ -23500,7 +23500,7 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                       }
                     } else {
                       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                        throw e11119;
+                        throw e6926;
                       } else {
                         return null;
                       }
@@ -23511,21 +23511,21 @@ modern_cljs.modern2.fizz_buzz = function fizz_buzz() {
                 }
               } else {
                 if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                  throw e11118;
+                  throw e6925;
                 } else {
                   return null;
                 }
               }
             }
           }());
-          var G__11130 = cljs.core.next.call(null, seq__11098__$1);
-          var G__11131 = null;
-          var G__11132 = 0;
-          var G__11133 = 0;
-          seq__11098 = G__11130;
-          chunk__11099 = G__11131;
-          count__11100 = G__11132;
-          i__11101 = G__11133;
+          var G__6937 = cljs.core.next.call(null, seq__6905__$1);
+          var G__6938 = null;
+          var G__6939 = 0;
+          var G__6940 = 0;
+          seq__6905 = G__6937;
+          chunk__6906 = G__6938;
+          count__6907 = G__6939;
+          i__6908 = G__6940;
           continue;
         }
       } else {
@@ -23540,8 +23540,8 @@ modern_cljs.modern2.print_seq = function print_seq(ls) {
   while (true) {
     if (cljs.core.seq.call(null, ls__$1)) {
       modern_cljs.modern2.print_line.call(null, cljs.core.first.call(null, ls__$1));
-      var G__11134 = cljs.core.rest.call(null, ls__$1);
-      ls__$1 = G__11134;
+      var G__6941 = cljs.core.rest.call(null, ls__$1);
+      ls__$1 = G__6941;
       continue;
     } else {
       return null;
@@ -23549,130 +23549,14 @@ modern_cljs.modern2.print_seq = function print_seq(ls) {
     break;
   }
 };
-modern_cljs.modern2.operator_add = function operator_add(stack) {
-  modern_cljs.modern2.print_line.call(null, [cljs.core.str("in + "), cljs.core.str(stack)].join(""));
-  try {
-    if ((cljs.core.seq_QMARK_.call(null, stack) || cljs.core.sequential_QMARK_.call(null, stack)) && cljs.core.seq.call(null, stack)) {
-      try {
-        var stack_tail__11144 = cljs.core.rest.call(null, stack);
-        if ((cljs.core.seq_QMARK_.call(null, stack_tail__11144) || cljs.core.sequential_QMARK_.call(null, stack_tail__11144)) && cljs.core.seq.call(null, stack_tail__11144)) {
-          var b = cljs.core.first.call(null, stack_tail__11144);
-          var r = cljs.core.rest.call(null, stack_tail__11144);
-          var a = cljs.core.first.call(null, stack);
-          return cljs.core.cons.call(null, a + b, r);
-        } else {
-          if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-            throw cljs.core.match.backtrack;
-          } else {
-            return null;
-          }
-        }
-      } catch (e11148) {
-        if (e11148 instanceof Error) {
-          var e__5267__auto__ = e11148;
-          if (e__5267__auto__ === cljs.core.match.backtrack) {
-            throw cljs.core.match.backtrack;
-          } else {
-            throw e__5267__auto__;
-          }
-        } else {
-          if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-            throw e11148;
-          } else {
-            return null;
-          }
-        }
-      }
-    } else {
-      if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-        throw cljs.core.match.backtrack;
-      } else {
-        return null;
-      }
-    }
-  } catch (e11147) {
-    if (e11147 instanceof Error) {
-      var e__5267__auto__ = e11147;
-      if (e__5267__auto__ === cljs.core.match.backtrack) {
-        return stack;
-      } else {
-        throw e__5267__auto__;
-      }
-    } else {
-      if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-        throw e11147;
-      } else {
-        return null;
-      }
-    }
-  }
-};
-modern_cljs.modern2.operator_subtract = function operator_subtract(stack) {
-  modern_cljs.modern2.print_line.call(null, [cljs.core.str("in - "), cljs.core.str(stack)].join(""));
-  try {
-    if ((cljs.core.seq_QMARK_.call(null, stack) || cljs.core.sequential_QMARK_.call(null, stack)) && cljs.core.seq.call(null, stack)) {
-      try {
-        var stack_tail__11158 = cljs.core.rest.call(null, stack);
-        if ((cljs.core.seq_QMARK_.call(null, stack_tail__11158) || cljs.core.sequential_QMARK_.call(null, stack_tail__11158)) && cljs.core.seq.call(null, stack_tail__11158)) {
-          var b = cljs.core.first.call(null, stack_tail__11158);
-          var r = cljs.core.rest.call(null, stack_tail__11158);
-          var a = cljs.core.first.call(null, stack);
-          return cljs.core.cons.call(null, b - a, r);
-        } else {
-          if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-            throw cljs.core.match.backtrack;
-          } else {
-            return null;
-          }
-        }
-      } catch (e11162) {
-        if (e11162 instanceof Error) {
-          var e__5267__auto__ = e11162;
-          if (e__5267__auto__ === cljs.core.match.backtrack) {
-            throw cljs.core.match.backtrack;
-          } else {
-            throw e__5267__auto__;
-          }
-        } else {
-          if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-            throw e11162;
-          } else {
-            return null;
-          }
-        }
-      }
-    } else {
-      if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-        throw cljs.core.match.backtrack;
-      } else {
-        return null;
-      }
-    }
-  } catch (e11161) {
-    if (e11161 instanceof Error) {
-      var e__5267__auto__ = e11161;
-      if (e__5267__auto__ === cljs.core.match.backtrack) {
-        return stack;
-      } else {
-        throw e__5267__auto__;
-      }
-    } else {
-      if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-        throw e11161;
-      } else {
-        return null;
-      }
-    }
-  }
-};
 modern_cljs.modern2.bin_operator = function bin_operator(stack, op) {
   try {
     if ((cljs.core.seq_QMARK_.call(null, stack) || cljs.core.sequential_QMARK_.call(null, stack)) && cljs.core.seq.call(null, stack)) {
       try {
-        var stack_tail__11172 = cljs.core.rest.call(null, stack);
-        if ((cljs.core.seq_QMARK_.call(null, stack_tail__11172) || cljs.core.sequential_QMARK_.call(null, stack_tail__11172)) && cljs.core.seq.call(null, stack_tail__11172)) {
-          var b = cljs.core.first.call(null, stack_tail__11172);
-          var r = cljs.core.rest.call(null, stack_tail__11172);
+        var stack_tail__6951 = cljs.core.rest.call(null, stack);
+        if ((cljs.core.seq_QMARK_.call(null, stack_tail__6951) || cljs.core.sequential_QMARK_.call(null, stack_tail__6951)) && cljs.core.seq.call(null, stack_tail__6951)) {
+          var b = cljs.core.first.call(null, stack_tail__6951);
+          var r = cljs.core.rest.call(null, stack_tail__6951);
           var a = cljs.core.first.call(null, stack);
           return cljs.core.cons.call(null, op.call(null, b, a), r);
         } else {
@@ -23682,9 +23566,9 @@ modern_cljs.modern2.bin_operator = function bin_operator(stack, op) {
             return null;
           }
         }
-      } catch (e11176) {
-        if (e11176 instanceof Error) {
-          var e__5267__auto__ = e11176;
+      } catch (e6955) {
+        if (e6955 instanceof Error) {
+          var e__5267__auto__ = e6955;
           if (e__5267__auto__ === cljs.core.match.backtrack) {
             throw cljs.core.match.backtrack;
           } else {
@@ -23692,7 +23576,7 @@ modern_cljs.modern2.bin_operator = function bin_operator(stack, op) {
           }
         } else {
           if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-            throw e11176;
+            throw e6955;
           } else {
             return null;
           }
@@ -23705,9 +23589,9 @@ modern_cljs.modern2.bin_operator = function bin_operator(stack, op) {
         return null;
       }
     }
-  } catch (e11175) {
-    if (e11175 instanceof Error) {
-      var e__5267__auto__ = e11175;
+  } catch (e6954) {
+    if (e6954 instanceof Error) {
+      var e__5267__auto__ = e6954;
       if (e__5267__auto__ === cljs.core.match.backtrack) {
         return stack;
       } else {
@@ -23715,43 +23599,59 @@ modern_cljs.modern2.bin_operator = function bin_operator(stack, op) {
       }
     } else {
       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-        throw e11175;
+        throw e6954;
       } else {
         return null;
       }
     }
   }
 };
-modern_cljs.modern2.eval_postfix_exprs = function eval_postfix_exprs(expr) {
-  var expr__$1 = expr;
+modern_cljs.modern2.eval_postfix = function eval_postfix(expr) {
+  var expr__$1 = cljs.core.seq.call(null, expr.split(" "));
   var stack = cljs.core.PersistentVector.EMPTY;
   while (true) {
     var temp__4090__auto__ = cljs.core.seq.call(null, expr__$1);
     if (temp__4090__auto__) {
       var x = temp__4090__auto__;
-      var ocr_11179 = cljs.core.first.call(null, x);
-      if (ocr_11179 === "+") {
-        var G__11181 = cljs.core.rest.call(null, expr__$1);
-        var G__11182 = modern_cljs.modern2.bin_operator.call(null, stack, cljs.core.partial.call(null, cljs.core._PLUS_));
-        expr__$1 = G__11181;
-        stack = G__11182;
+      var ocr_6958 = cljs.core.first.call(null, x);
+      if (ocr_6958 === "+") {
+        var G__6960 = cljs.core.rest.call(null, expr__$1);
+        var G__6961 = modern_cljs.modern2.bin_operator.call(null, stack, cljs.core.partial.call(null, cljs.core._PLUS_));
+        expr__$1 = G__6960;
+        stack = G__6961;
         continue;
       } else {
-        if (ocr_11179 === "-") {
-          var G__11183 = cljs.core.rest.call(null, expr__$1);
-          var G__11184 = modern_cljs.modern2.bin_operator.call(null, stack, cljs.core.partial.call(null, cljs.core._));
-          expr__$1 = G__11183;
-          stack = G__11184;
+        if (ocr_6958 === "-") {
+          var G__6962 = cljs.core.rest.call(null, expr__$1);
+          var G__6963 = modern_cljs.modern2.bin_operator.call(null, stack, cljs.core.partial.call(null, cljs.core._));
+          expr__$1 = G__6962;
+          stack = G__6963;
           continue;
         } else {
-          if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-            var G__11185 = cljs.core.rest.call(null, expr__$1);
-            var G__11186 = cljs.core.cons.call(null, parseInt(cljs.core.first.call(null, x)), stack);
-            expr__$1 = G__11185;
-            stack = G__11186;
+          if (ocr_6958 === "*") {
+            var G__6964 = cljs.core.rest.call(null, expr__$1);
+            var G__6965 = modern_cljs.modern2.bin_operator.call(null, stack, cljs.core.partial.call(null, cljs.core._STAR_));
+            expr__$1 = G__6964;
+            stack = G__6965;
             continue;
           } else {
-            return null;
+            if (ocr_6958 === "/") {
+              var G__6966 = cljs.core.rest.call(null, expr__$1);
+              var G__6967 = modern_cljs.modern2.bin_operator.call(null, stack, cljs.core.partial.call(null, cljs.core._SLASH_));
+              expr__$1 = G__6966;
+              stack = G__6967;
+              continue;
+            } else {
+              if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
+                var G__6968 = cljs.core.rest.call(null, expr__$1);
+                var G__6969 = cljs.core.cons.call(null, parseInt(cljs.core.first.call(null, x)), stack);
+                expr__$1 = G__6968;
+                stack = G__6969;
+                continue;
+              } else {
+                return null;
+              }
+            }
           }
         }
       }
@@ -23761,16 +23661,18 @@ modern_cljs.modern2.eval_postfix_exprs = function eval_postfix_exprs(expr) {
     break;
   }
 };
-modern_cljs.modern2.eval_postfix_string = function eval_postfix_string(exp) {
-  return modern_cljs.modern2.print_line.call(null, [cljs.core.str("Evaluating "), cljs.core.str(exp), cljs.core.str(" \x3d "), cljs.core.str(modern_cljs.modern2.eval_postfix_exprs.call(null, cljs.core.seq.call(null, exp.split(" "))))].join(""));
+modern_cljs.modern2.print_postfix_result = function print_postfix_result(exp) {
+  return modern_cljs.modern2.print_line.call(null, [cljs.core.str("Evaluating "), cljs.core.str(exp), cljs.core.str(" \x3d "), cljs.core.str(modern_cljs.modern2.eval_postfix.call(null, exp))].join(""));
+};
+modern_cljs.modern2.alert_postfix_result = function alert_postfix_result(exp) {
+  return alert([cljs.core.str("Evaluating "), cljs.core.str(exp), cljs.core.str(" \x3d "), cljs.core.str(modern_cljs.modern2.eval_postfix.call(null, exp))].join(""));
 };
 modern_cljs.modern2.display_result = function display_result() {
   var temp__4090__auto__ = document.getElementById("cInput");
   if (cljs.core.truth_(temp__4090__auto__)) {
     var input = temp__4090__auto__;
     var expr = input.value;
-    alert([cljs.core.str("Got it: "), cljs.core.str(expr)].join(""));
-    return modern_cljs.modern2.eval_postfix_string.call(null, expr);
+    return modern_cljs.modern2.alert_postfix_result.call(null, expr);
   } else {
     return alert("Could not get input");
   }
@@ -23778,14 +23680,12 @@ modern_cljs.modern2.display_result = function display_result() {
 goog.exportSymbol("modern_cljs.modern2.display_result", modern_cljs.modern2.display_result);
 modern_cljs.modern2.print_stuff = function print_stuff() {
   modern_cljs.modern2.print_seq.call(null, new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [1, 2, 3, 4, 5], null));
-  modern_cljs.modern2.print_line.call(null, "--- OK ---");
-  modern_cljs.modern2.print_line.call(null, modern_cljs.modern2.operator_add.call(null, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [1, 2, 3], null)));
-  modern_cljs.modern2.print_line.call(null, "--- Parsing ---");
-  modern_cljs.modern2.print_line.call(null, cljs.core.cons.call(null, parseInt("23"), cljs.core.PersistentVector.EMPTY));
   modern_cljs.modern2.print_line.call(null, "--- Results ---");
-  modern_cljs.modern2.eval_postfix_string.call(null, "23 7 +");
-  modern_cljs.modern2.eval_postfix_string.call(null, "23 7 + 5 -");
-  return modern_cljs.modern2.eval_postfix_string.call(null, "23 7 + 10 -");
+  modern_cljs.modern2.print_postfix_result.call(null, "23 7 +");
+  modern_cljs.modern2.print_postfix_result.call(null, "23 7 + 5 -");
+  modern_cljs.modern2.print_postfix_result.call(null, "25 4 * 5 -");
+  modern_cljs.modern2.print_postfix_result.call(null, "25 4 * 5 /");
+  return modern_cljs.modern2.print_postfix_result.call(null, "23 7 + 10 -");
 };
 goog.exportSymbol("modern_cljs.modern2.print_stuff", modern_cljs.modern2.print_stuff);
 goog.provide("modern_cljs.modern");
