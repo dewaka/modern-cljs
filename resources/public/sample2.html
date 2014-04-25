@@ -10,17 +10,20 @@
 <body>
     <!-- pointing to cljsbuild generated js file -->
     <script src="js/modern.js"></script>
-    
+
     <script>
       modern_cljs.modern2.greet_user("Dewaka");
+      modern_cljs.modern2.print_stuff();
+
+
     </script>
-    
+
     <p>
       <button onclick="modern_cljs.modern2.simple_click_event(this)">
         Click Me!
       </button>
     </p>
-    
+
     <h2>Simple Calculator</h2>
     <p>
       <input type="text" id="cInput" name="cInput"> <br/>
