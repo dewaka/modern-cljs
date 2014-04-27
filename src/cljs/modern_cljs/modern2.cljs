@@ -1,6 +1,8 @@
 (ns modern-cljs.modern2
-  (:require-macros [cljs.core.match.macros :refer [match]])
-  (:require [cljs.core.match]))
+  (:require-macros [cljs.core.match.macros :refer [match]]
+                   [cljs.core.async.macros :as m :refer [go]])
+  (:require [cljs.core.match]
+            [cljs.core.async :refer [chan close!]]))
 
 ;; (.write js/document "Hello, ClojureScript!")
 
@@ -60,6 +62,20 @@
     (let [expr (.-value input)]
       (alert-postfix-result expr))
     (js/alert "Could not get input")))
+
+(defn timeout [ms]
+  (let [c (chan)]
+    (js/setTimeout (fn [] (close! c)) ms)
+    c))
+ 
+;; This piece of code will have simple sleeps
+(go
+  (<! (timeout 1000))
+  (.log js/console "Hello")
+  (<! (timeout 1000))
+  (.log js/console "async")
+  (<! (timeout 1000))
+  (.log js/console "world!"))
 
 (defn ^:export print-stuff []
   ;; (fizz-buzz)

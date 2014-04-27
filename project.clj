@@ -8,6 +8,7 @@
   :source-paths ["src/clj" "src/cljs"]
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/core.match "0.2.1"]
+                 [org.clojure/core.async "0.1.298.0-2a82a1-alpha"]
 		 [org.clojure/clojurescript "0.0-2173"]]
 
   ;; lein-cljsbuild plugin to build a CLJS project
