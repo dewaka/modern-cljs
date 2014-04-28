@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Simple 2 CLJS</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <h1>Simple Game One</h1>
+    <!-- pointing to cljsbuild generated js file -->
+    <script src="js/modern.js"></script>
+    
+    <canvas id="game1Canvas" width="800" height="600" style="border:1px solid #c3c3c3;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script>
+      modern_cljs.game1.start_game1(document.getElementById("game1Canvas"));
+    </script>
+
+
+</body>
+</html>

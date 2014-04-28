@@ -31618,3 +31618,16 @@ modern_cljs.modern2.print_stuff = function print_stuff() {
   return modern_cljs.modern2.print_postfix_result.call(null, "23 7 + 10 -");
 };
 goog.exportSymbol("modern_cljs.modern2.print_stuff", modern_cljs.modern2.print_stuff);
+goog.provide("modern_cljs.game1");
+goog.require("cljs.core");
+goog.require("cljs.core.async");
+goog.require("modern_cljs.modern");
+goog.require("modern_cljs.modern");
+goog.require("cljs.core.async");
+goog.require("cljs.core.match");
+modern_cljs.game1.start_game1 = function start_game1(canvas) {
+  alert("Starting game1");
+  var ctx = canvas.getContext("2d");
+  return modern_cljs.modern.draw_circle.call(null, ctx, 155, 407, 100, 0, 2 * Math.PI, "blue");
+};
+goog.exportSymbol("modern_cljs.game1.start_game1", modern_cljs.game1.start_game1);
