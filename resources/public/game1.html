@@ -12,7 +12,8 @@
     <!-- pointing to cljsbuild generated js file -->
     <script src="js/modern.js"></script>
     
-    <canvas id="game1Canvas" width="800" height="600" style="border:1px solid #c3c3c3;">
+    <canvas id="game1Canvas" width="800" height="600" style="border:1px solid #c3c3c3;"
+            onclick="modern_cljs.game1.handle_click(event)">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
 

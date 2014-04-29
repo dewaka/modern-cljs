@@ -9,3 +9,11 @@
   (js/alert "Starting game1")
   (let [ctx (.getContext canvas "2d")]
     (modern/draw-circle ctx 155 407 100 0 (* 2 (.-PI js/Math)) "blue")))
+
+(defn log [s]
+  (.log js/console s))
+
+(defn ^:export handle-click [e]
+  (js/alert "You clicked the canvas")
+  (log (str "x = " (.-x e) ", y = " (.-y e)))
+  (log e))

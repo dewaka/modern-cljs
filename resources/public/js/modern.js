@@ -31631,3 +31631,12 @@ modern_cljs.game1.start_game1 = function start_game1(canvas) {
   return modern_cljs.modern.draw_circle.call(null, ctx, 155, 407, 100, 0, 2 * Math.PI, "blue");
 };
 goog.exportSymbol("modern_cljs.game1.start_game1", modern_cljs.game1.start_game1);
+modern_cljs.game1.log = function log(s) {
+  return console.log(s);
+};
+modern_cljs.game1.handle_click = function handle_click(e) {
+  alert("You clicked the canvas");
+  modern_cljs.game1.log.call(null, [cljs.core.str("x \x3d "), cljs.core.str(e.x), cljs.core.str(", y \x3d "), cljs.core.str(e.y)].join(""));
+  return modern_cljs.game1.log.call(null, e);
+};
+goog.exportSymbol("modern_cljs.game1.handle_click", modern_cljs.game1.handle_click);
