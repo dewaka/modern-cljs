@@ -13,7 +13,14 @@
 (defn log [s]
   (.log js/console s))
 
+(defn game-canvas [] (.getElementById js/document "game1Canvas"))
+
+(defn draw-small-circle [x y]
+  (let [ctx (.getContext (game-canvas) "2d")]
+    (modern/draw-circle ctx x y 10 0 (* 2 (.-PI js/Math)) "red")))
+
 (defn ^:export handle-click [e]
-  (js/alert "You clicked the canvas")
+  ;; (js/alert "You clicked the canvas")
   (log (str "x = " (.-x e) ", y = " (.-y e)))
-  (log e))
+  (log e)
+  (draw-small-circle (.-x e) (.-y e)))

@@ -31634,9 +31634,16 @@ goog.exportSymbol("modern_cljs.game1.start_game1", modern_cljs.game1.start_game1
 modern_cljs.game1.log = function log(s) {
   return console.log(s);
 };
+modern_cljs.game1.game_canvas = function game_canvas() {
+  return document.getElementById("game1Canvas");
+};
+modern_cljs.game1.draw_small_circle = function draw_small_circle(x, y) {
+  var ctx = modern_cljs.game1.game_canvas.call(null).getContext("2d");
+  return modern_cljs.modern.draw_circle.call(null, ctx, x, y, 10, 0, 2 * Math.PI, "red");
+};
 modern_cljs.game1.handle_click = function handle_click(e) {
-  alert("You clicked the canvas");
   modern_cljs.game1.log.call(null, [cljs.core.str("x \x3d "), cljs.core.str(e.x), cljs.core.str(", y \x3d "), cljs.core.str(e.y)].join(""));
-  return modern_cljs.game1.log.call(null, e);
+  modern_cljs.game1.log.call(null, e);
+  return modern_cljs.game1.draw_small_circle.call(null, e.x, e.y);
 };
 goog.exportSymbol("modern_cljs.game1.handle_click", modern_cljs.game1.handle_click);
