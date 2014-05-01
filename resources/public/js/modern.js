@@ -31625,25 +31625,135 @@ goog.require("modern_cljs.modern");
 goog.require("modern_cljs.modern");
 goog.require("cljs.core.async");
 goog.require("cljs.core.match");
+modern_cljs.game1.log = function log(s) {
+  return console.log(s);
+};
+modern_cljs.game1.timeout = function timeout(ms) {
+  var c = cljs.core.async.chan.call(null);
+  setTimeout(function() {
+    return cljs.core.async.close_BANG_.call(null, c);
+  }, ms);
+  return c;
+};
 modern_cljs.game1.start_game1 = function start_game1(canvas) {
-  alert("Starting game1");
+  modern_cljs.game1.log.call(null, "Starting game1");
   var ctx = canvas.getContext("2d");
   return modern_cljs.modern.draw_circle.call(null, ctx, 155, 407, 100, 0, 2 * Math.PI, "blue");
 };
 goog.exportSymbol("modern_cljs.game1.start_game1", modern_cljs.game1.start_game1);
-modern_cljs.game1.log = function log(s) {
-  return console.log(s);
-};
 modern_cljs.game1.game_canvas = function game_canvas() {
   return document.getElementById("game1Canvas");
 };
 modern_cljs.game1.draw_small_circle = function draw_small_circle(x, y) {
   var ctx = modern_cljs.game1.game_canvas.call(null).getContext("2d");
-  return modern_cljs.modern.draw_circle.call(null, ctx, x, y, 10, 0, 2 * Math.PI, "red");
+  var c__5579__auto__ = cljs.core.async.chan.call(null, 1);
+  cljs.core.async.impl.dispatch.run.call(null, function() {
+    var f__5580__auto__ = function() {
+      var switch__5564__auto__ = function(state_10059) {
+        var state_val_10060 = state_10059[1];
+        if (state_val_10060 === 2) {
+          var inst_10054 = state_10059[2];
+          var inst_10055 = Math.PI;
+          var inst_10056 = 2 * inst_10055;
+          var inst_10057 = modern_cljs.modern.draw_circle.call(null, ctx, y, x, 5, 0, inst_10056, "green");
+          var state_10059__$1 = function() {
+            var statearr_10061 = state_10059;
+            statearr_10061[7] = inst_10054;
+            return statearr_10061;
+          }();
+          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_10059__$1, inst_10057);
+        } else {
+          if (state_val_10060 === 1) {
+            var inst_10049 = Math.PI;
+            var inst_10050 = 2 * inst_10049;
+            var inst_10051 = modern_cljs.modern.draw_circle.call(null, ctx, x, y, 5, 0, inst_10050, "red");
+            var inst_10052 = modern_cljs.game1.timeout.call(null, 200);
+            var state_10059__$1 = function() {
+              var statearr_10062 = state_10059;
+              statearr_10062[8] = inst_10051;
+              return statearr_10062;
+            }();
+            return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_10059__$1, 2, inst_10052);
+          } else {
+            return null;
+          }
+        }
+      };
+      return function(switch__5564__auto__) {
+        return function() {
+          var state_machine__5565__auto__ = null;
+          var state_machine__5565__auto____0 = function() {
+            var statearr_10066 = [null, null, null, null, null, null, null, null, null];
+            statearr_10066[0] = state_machine__5565__auto__;
+            statearr_10066[1] = 1;
+            return statearr_10066;
+          };
+          var state_machine__5565__auto____1 = function(state_10059) {
+            while (true) {
+              var ret_value__5566__auto__ = function() {
+                try {
+                  while (true) {
+                    var result__5567__auto__ = switch__5564__auto__.call(null, state_10059);
+                    if (cljs.core.keyword_identical_QMARK_.call(null, result__5567__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
+                      continue;
+                    } else {
+                      return result__5567__auto__;
+                    }
+                    break;
+                  }
+                } catch (e10067) {
+                  if (e10067 instanceof Object) {
+                    var ex__5568__auto__ = e10067;
+                    var statearr_10068_10070 = state_10059;
+                    statearr_10068_10070[5] = ex__5568__auto__;
+                    cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_10059);
+                    return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+                  } else {
+                    if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
+                      throw e10067;
+                    } else {
+                      return null;
+                    }
+                  }
+                }
+              }();
+              if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__5566__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
+                var G__10071 = state_10059;
+                state_10059 = G__10071;
+                continue;
+              } else {
+                return ret_value__5566__auto__;
+              }
+              break;
+            }
+          };
+          state_machine__5565__auto__ = function(state_10059) {
+            switch(arguments.length) {
+              case 0:
+                return state_machine__5565__auto____0.call(this);
+              case 1:
+                return state_machine__5565__auto____1.call(this, state_10059);
+            }
+            throw new Error("Invalid arity: " + arguments.length);
+          };
+          state_machine__5565__auto__.cljs$core$IFn$_invoke$arity$0 = state_machine__5565__auto____0;
+          state_machine__5565__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__5565__auto____1;
+          return state_machine__5565__auto__;
+        }();
+      }(switch__5564__auto__);
+    }();
+    var state__5581__auto__ = function() {
+      var statearr_10069 = f__5580__auto__.call(null);
+      statearr_10069[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__5579__auto__;
+      return statearr_10069;
+    }();
+    return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__5581__auto__);
+  });
+  return c__5579__auto__;
 };
 modern_cljs.game1.handle_click = function handle_click(e) {
   modern_cljs.game1.log.call(null, [cljs.core.str("x \x3d "), cljs.core.str(e.x), cljs.core.str(", y \x3d "), cljs.core.str(e.y)].join(""));
   modern_cljs.game1.log.call(null, e);
-  return modern_cljs.game1.draw_small_circle.call(null, e.x, e.y);
+  return modern_cljs.game1.draw_small_circle.call(null, e.pageX, e.pageY);
 };
 goog.exportSymbol("modern_cljs.game1.handle_click", modern_cljs.game1.handle_click);

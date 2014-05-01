@@ -5,22 +5,31 @@
             [cljs.core.async :refer [chan close!]]
             [modern-cljs.modern :as modern]))
 
-(defn ^:export start-game1 [canvas]
-  (js/alert "Starting game1")
-  (let [ctx (.getContext canvas "2d")]
-    (modern/draw-circle ctx 155 407 100 0 (* 2 (.-PI js/Math)) "blue")))
-
 (defn log [s]
   (.log js/console s))
+
+(defn timeout [ms]
+  (let [c (chan)]
+    (js/setTimeout (fn [] (close! c)) ms)
+    c))
+
+(defn ^:export start-game1 [canvas]
+  (log "Starting game1")
+  (let [ctx (.getContext canvas "2d")]
+    (modern/draw-circle ctx 155 407 100 0 (* 2 (.-PI js/Math)) "blue")))
 
 (defn game-canvas [] (.getElementById js/document "game1Canvas"))
 
 (defn draw-small-circle [x y]
   (let [ctx (.getContext (game-canvas) "2d")]
-    (modern/draw-circle ctx x y 10 0 (* 2 (.-PI js/Math)) "red")))
+    (go 
+        (modern/draw-circle ctx x y 5 0 (* 2 (.-PI js/Math)) "red")
+        (<! (timeout 200))
+        (modern/draw-circle ctx y x 5 0 (* 2 (.-PI js/Math)) "green"))))
+
 
 (defn ^:export handle-click [e]
   ;; (js/alert "You clicked the canvas")
   (log (str "x = " (.-x e) ", y = " (.-y e)))
   (log e)
-  (draw-small-circle (.-x e) (.-y e)))
+  (draw-small-circle (.-pageX e) (.-pageY e)))
