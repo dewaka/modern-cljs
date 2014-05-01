@@ -22,9 +22,10 @@
 
 (defn draw-small-circle [x y]
   (let [ctx (.getContext (game-canvas) "2d")]
+    (log (str "x = " x ", y = " y))
     (go 
         (modern/draw-circle ctx x y 5 0 (* 2 (.-PI js/Math)) "red")
-        (<! (timeout 200))
+        (<! (timeout 500))
         (modern/draw-circle ctx y x 5 0 (* 2 (.-PI js/Math)) "green"))))
 
 
@@ -32,4 +33,5 @@
   ;; (js/alert "You clicked the canvas")
   (log (str "x = " (.-x e) ", y = " (.-y e)))
   (log e)
-  (draw-small-circle (.-pageX e) (.-pageY e)))
+  (draw-small-circle (- (.-pageX e) (.-offsetLeft (game-canvas))) 
+                     (- (.-pageY e) (.-offsetTop (game-canvas)))))
